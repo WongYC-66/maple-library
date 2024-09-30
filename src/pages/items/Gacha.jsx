@@ -139,16 +139,12 @@ export default function Gacha() {
             {/* Pagination */}
             {updatePagination(itemLibrary, filterGachaList)}
 
-            <p className="my-0">Source_1 : <a href="https://royals.ms/forum/threads/lets-play-gachapon.110983/" target="_blank">Let's Play Gachapon!</a></p>
-            <p className="my-0">Source_2 : <a href="https://royals.ms/forum/threads/lhc-exchange-rewards-cs-ws-bwg-taru-totem-rewards-found.193830/" target="_blank">LHC exchange rewards</a></p>
-            <p className="my-0">Source_3 : <a href="https://royals.ms/forum/threads/results-from-2575-lhc-totems.195508/" target="_blank">Results from 2575 LHC Totems</a></p>
-            <p className="my-0">Source_4 : <a href="https://royals.ms/forum/threads/miwok-artifact-release-rewards-ws-cs-bwg-20-css-taru-totem.194646/" target="_blank">Miwok Artifact release rewards (Ws, Cs, Bwg, 20% css, Taru totem)</a></p>
-
         </div>
     )
 }
 
 const renderGachaList = (filteredItemList, itemIdToNameDict) => {
+    // eslint-disable-next-line react-hooks/rules-of-hooks
     const [searchParams] = useSearchParams()
 
     updateSearchResultCount(filteredItemList.length)
@@ -177,6 +173,7 @@ const renderGachaList = (filteredItemList, itemIdToNameDict) => {
     })
 }
 
+// eslint-disable-next-line react-refresh/only-export-components
 export const gachaLocationMapping = (name) => {
     if (!name) return 'location not found'
     switch (name) {
@@ -232,9 +229,7 @@ const updateLocationImage = (location) => {
     if (!imgEl) return
 
     if (!location) return
-    // if(location === 'all' || !location) return imgEl.classList.add("d-none");
 
-    // imgEl.classList.remove("d-none");
     imgEl.setAttribute("src", `/images/gacha_map/${location}.png`)
 }
 
@@ -253,6 +248,7 @@ const renderItemImageWrapper = (itemId, itemIdToNameDict) => {
 }
 
 
+// eslint-disable-next-line react-refresh/only-export-components
 export const gachaAction = async ({ request }) => {
     const data = await request.formData()
 
@@ -261,11 +257,7 @@ export const gachaAction = async ({ request }) => {
         typeBy: data.get('typeBy'),
         searchName: data.get('searchName'),
     }
-    // console.log(submission)
-
-    // send your post request . ajax
-    // ....
-
+    
     // redirect the user
     const actionUrl = `/gacha?page=1&location=${submission.locationBy}&type=${submission.typeBy}&search=${submission.searchName}`
     return redirect(actionUrl)

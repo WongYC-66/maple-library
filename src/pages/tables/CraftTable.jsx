@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-no-target-blank */
 import { Form, redirect, useSearchParams, Link } from "react-router-dom"
 import { useState, useEffect } from "react"
 // 
@@ -92,8 +93,6 @@ export default function CraftTable() {
 
             {/* Pagination */}
             {updatePagination(itemLibrary, filterCraftItemList)}
-
-            <p>Source : <a href="https://royals.ms/forum/threads/zancks-crafting-guide.214322/" target="_blank">Zancks' Crafting Guide</a></p>
 
         </div>
 
@@ -272,11 +271,7 @@ export const craftTableAction = async ({ request }) => {
     const submission = {
         searchName: data.get('searchName'),
     }
-    // console.log(submission)
-
-    // send your post request . ajax
-    // ....
-
+   
     // redirect the user
     const actionUrl = `/craft-table?page=1&search=${submission.searchName}`
     return redirect(actionUrl)

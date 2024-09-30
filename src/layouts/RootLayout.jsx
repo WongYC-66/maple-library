@@ -8,7 +8,6 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import { LinkContainer } from 'react-router-bootstrap'
-import { Link } from "react-router-dom";
 import Image from 'react-bootstrap/Image'
 // 
 
@@ -19,10 +18,6 @@ export default function RootLayout() {
       <ScrollRestoration />
 
       <header className="z-1000">
-        {/* <NavLink to="/">Home</NavLink>
-          <NavLink to="about">About</NavLink>
-          <NavLink to="help">Help</NavLink>
-          <NavLink to="careers">Careers</NavLink> */}
 
         <Navbar collapseOnSelect expand="md" className="bg-body-tertiary">
           <Container fluid>
@@ -92,10 +87,6 @@ export default function RootLayout() {
                   <Nav.Link>Monster</Nav.Link>
                 </LinkContainer>
 
-                {/* <LinkContainer to="/map">
-                  <Nav.Link>Map</Nav.Link>
-                </LinkContainer> */}
-
                 {/* Items Tab */}
                 <NavDropdown title="Items" id="collapsible-nav-dropdown">
                   <LinkContainer to="/use">
@@ -143,26 +134,6 @@ export default function RootLayout() {
                   <Nav.Link>Quest</Nav.Link>
                 </LinkContainer>
 
-                {/* Links */}
-                <NavDropdown title="Links" id="collapsible-nav-dropdown">
-
-                  <Link to='https://royals-droppy.netlify.app/' target="_blank" >
-                    <p className="m-0 p-0 mx-3"> old droptracker</p>
-                  </Link>
-
-                  <Link to='https://royals-droppy-v2-pc.netlify.app/' target="_blank" >
-                    <p className="m-0 p-0 mx-3"> droptracker v2</p>
-                  </Link>
-
-                  <Link to='https://royals-droppy-v2-mobile.netlify.app/' target="_blank" >
-                    <p className="m-0 p-0 mx-3"> droptracker v2-m</p>
-                  </Link>
-
-                  <LinkContainer to="/about-me">
-                    <NavDropdown.Item>About Me</NavDropdown.Item>
-                  </LinkContainer>
-
-                </NavDropdown>
               </Nav>
 
               <Nav>

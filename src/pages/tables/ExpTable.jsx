@@ -27,7 +27,6 @@ export default function ExpTable() {
                 </tbody>
             </Table>
 
-            <p>Source : <a href="https://bbb.hidden-street.net/experience-table" target="_blank">bbb hidden-street</a></p>
         </div>
     )
 }
