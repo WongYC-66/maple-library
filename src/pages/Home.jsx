@@ -30,7 +30,7 @@ export default function Home() {
                 <Button className="w-50" variant="secondary" type="submit">Submit</Button>
             </Form>
 
-            <Image className="w-75" src="/library2.png" />
+            <Image className="w-75" src="/library.jpg" />
 
             <p className="mt-5"> Created by YC Wong @ 2024 </p>
             <p> Copyright of all picture used here belongs to Nexon, and only fetched from maplestory.io </p>
